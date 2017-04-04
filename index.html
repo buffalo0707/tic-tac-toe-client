@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags unless you know what you are doing -->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags unless you know what you are doing -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="landing">
+        <div class="sign-in-holder">
+          <form id="sign-in">
+            <fieldset>
+              <legend>Sign in!</legend>
+              <input type="text" name="credentials[email]" id="sign-in-email" placeholder="email address"> </br>
+              <input type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
+              <input type="submit" name="submit" value="Sign in">
+            </fieldset>
+          </form>
+        </div>
+        <div class="sign-up-holder hidden">
+          <form id="sign-up">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <input type="text" name="credentials[email]" id="sign-up-email" placeholder="email address"> </br>
+              <input type="password" name="credentials[password]" id="sign-up-password" placeholder="password"></br>
+              <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="confirm password"></br>
+              <input type="submit" name="submit" value="Sign up!">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+    <h1>Tic Tac Toe</h1>
+      <div class="game">
+
+        <form>
+          <div class='upper-left'><button class='cell' type='submit' value="0">0</button></div>
+          <div><button class='cell' type='submit' value="1">1</button></div>
+          <div><button class='cell' type='submit' value="2">2</button></div>
+          <div><button class='cell' type='submit' value="3">3</button></div>
+          <div><button class='cell' type='submit' value="4">4</button></div>
+          <div><button class='cell' type='submit' value="5">5</button></div>
+          <div><button class='cell' type='submit' value="6">6</button></div>
+          <div><button class='cell' type='submit' value="7">7</button></div>
+          <div><button class='cell' type='submit' value="8">8</button></div>
+          <div class="hidden">
+            <input name="game[cell][index]" type="text" value="">
+            <input name="game[cell][value]" type="text" value="">
+            <input name="game[over]" type="text" value="false">
+          </div>
+        </form>
+      </div>
+    </body>
+</html>
