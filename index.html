@@ -12,14 +12,28 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <div class="landing">
+        <div class="sign-in-holder">
+          <form id="sign-in">
+            <fieldset>
+              <legend>Sign in</legend>
+              <input type="text" name="credentials[email]" id="sign-in-email" placeholder="email address"> </br>
+              <input type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
+              <input type="submit" name="submit" value="Sign in">
+            </fieldset>
+          </form>
+        </div>
+        <div class="sign-up-holder">
+          <form id="sign-up">
+            <fieldset>
+              <legend>Sign up</legend>
+              <input type="text" name="credentials[email]" id="sign-up-email" placeholder="email address"> </br>
+              <input type="password" name="credentials[password]" id="sign-up-password" placeholder="password"></br>
+              <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="confirm password"></br>
+              <input type="submit" name="submit" value="Sign up!">
+            </fieldset>
+          </form>
+        </div>
+      </div>
     </body>
 </html>
