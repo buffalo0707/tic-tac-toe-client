@@ -21,8 +21,10 @@ const chooseCell = function (event) {
   event.preventDefault()
   $('#cell-index-input').attr('value', this.id)
   $('#cell-value-input').attr('value', currentPlayer)
-  this.innerHTML = currentPlayer
-  nextTurn()
+  if (this.innerHTML === '') {
+    this.innerHTML = currentPlayer
+    nextTurn()
+  } else { console.log('Space already taken, try again') }
 }
 
 const addHandlers = () => {
