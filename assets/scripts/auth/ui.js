@@ -13,6 +13,8 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   console.log('success', data)
   store.user = data.user
+  $('#sign-in').hide()
+  $('#game').show()
 }
 
 const signInFailure = (error) => {

@@ -1,5 +1,9 @@
-const initializeGame = function () {
+const initializeSite = function () {
   $('#new-game').hide()
+  $('#game').hide()
+  $('#sign-up').hide()
+  $('#sign-out').hide()
+  $('#change-password').hide()
 }
 
 const resetBoard = function () {
@@ -11,6 +15,6 @@ const resetBoard = function () {
 }
 
 module.exports = {
-  initializeGame,
+  initializeSite,
   resetBoard
 }

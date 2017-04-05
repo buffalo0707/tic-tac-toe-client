@@ -22,7 +22,7 @@ const nextTurn = function () {
 }
 
 const onLoad = function () {
-  gameUi.initializeGame()
+  gameUi.initializeSite()
 }
 
 const newGame = function () {

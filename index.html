@@ -55,23 +55,26 @@
     </form>
   </div>
   </div>
-  <div class="game">
+  <div id="game" class="game-board">
     <form id="game-form">
-      <div><button class='cell' type='button' id="0"></button></div>
-      <div><button class='cell' type='button' id="1"></button></div>
-      <div><button class='cell' type='button' id="2"></button></div>
-      <div><button class='cell' type='button' id="3"></button></div>
-      <div><button class='cell' type='button' id="4"></button></div>
-      <div><button class='cell' type='button' id="5"></button></div>
-      <div><button class='cell' type='button' id="6"></button></div>
-      <div><button class='cell' type='button' id="7"></button></div>
-      <div><button class='cell' type='button' id="8"></button></div>
+      <div class="game-cell"><button class='cell' type='button' id="0"></button></div>
+      <div class="game-cell"><button class='cell' type='button' id="1"></button></div>
+      <div class="game-cell"><button class='cell' type='button' id="2"></button></div>
+      <div class="game-cell"><button class='cell' type='button' id="3"></button></div>
+      <div class="game-cell"><button class='cell' type='button' id="4"></button></div>
+      <div class="game-cell"><button class='cell' type='button' id="5"></button></div>
+      <div class="game-cell"><button class='cell' type='button' id="6"></button></div>
+      <div class="game-cell"><button class='cell' type='button' id="7"></button></div>
+      <div class="game-cell"><button class='cell' type='button' id="8"></button></div>
       <div class="hidden">
         <input id="cell-index-input" name="game[cell][index]" type="text" value=".">
         <input id="cell-value-input" name="game[cell][value]" type="text" value=".">
         <input name="game[over]" type="text" value="false">
       </div>
     </form>
+  </div>
+  <div class="game-controls">
+    <div><button class="game-control" type='button' id="new-game">New Game</button></div>
   </div>
 </body>
 
