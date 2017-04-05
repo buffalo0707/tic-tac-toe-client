@@ -35,8 +35,8 @@ const chooseCell = function (event) {
     // do nothing for now
   } else if (this.innerHTML === '') {
     $('#cell-index-input').attr('value', this.id)
-    $('#cell-value-input').attr('value', currentPlayer)
-    this.innerHTML = currentPlayer
+    $('#cell-value-input').attr('value', this.id)
+    this.innerHTML = '<img src=assets/images/' + currentPlayer + '.jpg>'
     gameData.updatePlayerArray(currentPlayer, this.id)
     gameData.cells.push(this.id)
     gameLogic.isGameOver(currentPlayer)
