@@ -34,11 +34,21 @@ const updateSuccess = (data) => {
 const updateFailure = (error) => {
   console.log('failure', error)
 }
+
+const getSuccess = (data) => {
+  console.log('got games ok. here is the data:', data);
+}
+
+const getFailure = (error) => {
+  console.log('failed to get games', error);
+}
 module.exports = {
   initializeSite,
   resetBoard,
   createSuccess,
   createFailure,
   updateSuccess,
-  updateFailure
+  updateFailure,
+  getSuccess,
+  getFailure
 }

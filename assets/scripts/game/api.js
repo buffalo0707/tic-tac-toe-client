@@ -20,8 +20,28 @@ const updateGame = (data) => {
     data
   })
 }
+const getGames = (isComplete) => {
+  if (isComplete) {
+    return $.ajax({
+      url: config.apiOrigin + '/games?over=true',
+      method: 'GET',
+      headers: {
+        Authorization: 'Token token=' + store.user.token
+      }
+    })
+  } else {
+    return $.ajax({
+      url: config.apiOrigin + '/games',
+      method: 'GET',
+      headers: {
+        Authorization: 'Token token=' + store.user.token
+      }
+    })
+  }
+}
 
 module.exports = {
   updateGame,
-  createGame
+  createGame,
+  getGames
 }

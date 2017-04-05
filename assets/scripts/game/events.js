@@ -35,10 +35,10 @@ const chooseCell = function (event) {
     // do nothing for now
   } else if (this.innerHTML === '') {
     $('#cell-index-input').attr('value', this.id)
-    $('#cell-value-input').attr('value', this.id)
+    $('#cell-value-input').attr('value', currentPlayer)
     this.innerHTML = '<img src=assets/images/' + currentPlayer + '.jpg>'
     gameData.updatePlayerArray(currentPlayer, this.id)
-    gameData.cells.push(this.id)
+    gameData.cells[this.id] = currentPlayer
     gameLogic.isGameOver(currentPlayer)
     // $('#game-form').submit(event, updateGame)
     $('#game-form').submit(event, onGameFormSubmit)
@@ -47,6 +47,7 @@ const chooseCell = function (event) {
       $('#new-game').show()
     }
     nextTurn()
+    console.log(gameData.cells);
   } else {
     // do nothing?
   }
@@ -60,6 +61,11 @@ const onGameFormSubmit = function (event) {
   .then(ui.updateSuccess)
   .catch(ui.updateFailure)
 }
+const getAllGames = function () {
+  api.getGames(true)
+  .then(ui.getSuccess)
+  .catch(ui.getFailure)
+}
 
 const addHandlers = () => {
   $('.cell').on('click', chooseCell)
@@ -68,5 +74,6 @@ const addHandlers = () => {
 
 module.exports = {
   addHandlers,
-  onLoad
+  onLoad,
+  getAllGames
 }

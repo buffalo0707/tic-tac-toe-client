@@ -3,6 +3,7 @@
 const store = require('../store.js')
 const gameApi = require('../game/api.js')
 const gameUi = require('../game/ui.js')
+const gameEvents = require('../game/events.js')
 
 const signUpSuccess = (data) => {
   console.log(data)
@@ -25,6 +26,7 @@ const signInSuccess = (data) => {
   $('#sign-out-holder').hide()
   $('#sign-out-holder').show()
   $('#change-password-holder').show()
+  gameEvents.getAllGames()
 }
 
 const signInFailure = (error) => {

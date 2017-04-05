@@ -1,4 +1,4 @@
-let cells = []
+let cells = ['','','','','','','','','']
 const winningCombos = [
   // rows
   ['0', '1', '2'],
