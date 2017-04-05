@@ -1,57 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <div class="landing">
-        <div class="sign-in-holder">
-          <form id="sign-in">
-            <fieldset>
-              <legend>Sign in</legend>
-              <input type="text" name="credentials[email]" id="sign-in-email" placeholder="email address"> </br>
-              <input type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
-              <input type="submit" name="submit" value="Sign in">
-            </fieldset>
-          </form>
-        </div>
-        <div class="sign-up-holder">
-          <form id="sign-up">
-            <fieldset>
-              <legend>Sign up</legend>
-              <input type="text" name="credentials[email]" id="sign-up-email" placeholder="email address"> </br>
-              <input type="password" name="credentials[password]" id="sign-up-password" placeholder="password"></br>
-              <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="confirm password"></br>
-              <input type="submit" name="submit" value="Sign up">
-            </fieldset>
-          </form>
-        </div>
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+  <div class="landing">
+    <div class="sign-in-holder">
+      <form id="sign-in">
+        <fieldset>
+          <legend>Sign in</legend>
+          <input type="text" name="credentials[email]" id="sign-in-email" placeholder="email address"> </br>
+          <input type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
+          <input type="submit" name="submit" value="Sign in">
+        </fieldset>
+      </form>
+    </div>
+    <div class="sign-up-holder">
+      <form id="sign-up">
+        <fieldset>
+          <legend>Sign up</legend>
+          <input type="text" name="credentials[email]" id="sign-up-email" placeholder="email address"> </br>
+          <input type="password" name="credentials[password]" id="sign-up-password" placeholder="password"></br>
+          <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="confirm password"></br>
+          <input type="submit" name="submit" value="Sign up">
+        </fieldset>
+      </form>
+    </div>
+    <div class="sign-out">
+    <form id="sign-out">
+      <fieldset>
+        <legend>Sign out!</legend>
+        <input type="submit" name="submit" value="Sign out!">
+      </fieldset>
+    </form>
+  </div>
+    <div class="change-password">
+    <form id="change-password">
+      <fieldset>
+        <legend>Change Password</legend>
+        <input type="password" name="passwords[old]" placeholder="current password"> </br>
+        <input type="password" name="passwords[new]" placeholder="new password"></br>
+        <input type="submit" name="submit" value="Change Password!">
+      </fieldset>
+    </form>
+  </div>
+  </div>
+  <div class="game">
+    <form id="game-form">
+      <div><button class='cell' type='button' id="0"></button></div>
+      <div><button class='cell' type='button' id="1"></button></div>
+      <div><button class='cell' type='button' id="2"></button></div>
+      <div><button class='cell' type='button' id="3"></button></div>
+      <div><button class='cell' type='button' id="4"></button></div>
+      <div><button class='cell' type='button' id="5"></button></div>
+      <div><button class='cell' type='button' id="6"></button></div>
+      <div><button class='cell' type='button' id="7"></button></div>
+      <div><button class='cell' type='button' id="8"></button></div>
+      <div class="hidden">
+        <input id="cell-index-input" name="game[cell][index]" type="text" value=".">
+        <input id="cell-value-input" name="game[cell][value]" type="text" value=".">
+        <input name="game[over]" type="text" value="false">
       </div>
-      <div class="game">
-        <form id="game-form">
-          <div><button class='cell' type='button' id="0"></button></div>
-          <div><button class='cell' type='button' id="1"></button></div>
-          <div><button class='cell' type='button' id="2"></button></div>
-          <div><button class='cell' type='button' id="3"></button></div>
-          <div><button class='cell' type='button' id="4"></button></div>
-          <div><button class='cell' type='button' id="5"></button></div>
-          <div><button class='cell' type='button' id="6"></button></div>
-          <div><button class='cell' type='button' id="7"></button></div>
-          <div><button class='cell' type='button' id="8"></button></div>
-          <div class="hidden">
-            <input id="cell-index-input" name="game[cell][index]" type="text" value=".">
-            <input id="cell-value-input" name="game[cell][value]" type="text" value=".">
-            <input name="game[over]" type="text" value="false">
-          </div>
-        </form>
-      </div>
-    </body>
+    </form>
+  </div>
+</body>
+
 </html>
