@@ -41,9 +41,10 @@ const chooseCell = function (event) {
     gameData.cells.push(this.id)
     gameLogic.isGameOver(currentPlayer)
     // $('#game-form').submit(event, updateGame)
-    // $('#game-form').submit()
+    $('#game-form').submit(event, onGameFormSubmit)
+    $('#game-form').trigger('submit')
     if (gameData.gameOver === true) {
-    $('#new-game').show()
+      $('#new-game').show()
     }
     nextTurn()
   } else {
@@ -51,16 +52,18 @@ const chooseCell = function (event) {
   }
 }
 
-const createGame = function (event) {
+const onGameFormSubmit = function (event) {
+  event.preventDefault()
   const data = getFormFields(this)
   event.preventDefault()
-
+  api.updateGame(data)
+  .then(ui.updateSuccess)
+  .catch(ui.updateFailure)
 }
 
 const addHandlers = () => {
   $('.cell').on('click', chooseCell)
   $('#new-game').on('click', newGame)
-  $('game-form').on('submit', createGame)
 }
 
 module.exports = {

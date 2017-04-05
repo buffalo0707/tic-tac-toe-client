@@ -14,7 +14,7 @@ const resetBoard = function () {
   for (let i = 0; i < array.length; i++) {
     // remove image from card (flip face down)
     array[i].innerHTML = ''
-    $("#game-over-input").attr('value', gameData.gameOver)
+    $('#game-over-input').attr('value', gameData.gameOver)
   }
 }
 
@@ -27,9 +27,18 @@ const createFailure = (error) => {
   console.log('failure', error)
 }
 
+const updateSuccess = (data) => {
+  console.log('update success', data)
+}
+
+const updateFailure = (error) => {
+  console.log('failure', error)
+}
 module.exports = {
   initializeSite,
   resetBoard,
   createSuccess,
-  createFailure
+  createFailure,
+  updateSuccess,
+  updateFailure
 }
