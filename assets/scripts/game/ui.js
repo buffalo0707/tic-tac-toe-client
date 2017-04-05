@@ -14,7 +14,17 @@ const resetBoard = function () {
   }
 }
 
+const createSuccess = (data) => {
+  console.log('success', data)
+}
+
+const createFailure = (error) => {
+  console.log('failure', error)
+}
+
 module.exports = {
   initializeSite,
-  resetBoard
+  resetBoard,
+  createSuccess,
+  createFailure
 }
