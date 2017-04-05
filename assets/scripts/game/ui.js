@@ -1,8 +1,8 @@
 const initializeSite = function () {
   $('#new-game').hide()
   $('#game').hide()
-  $('#sign-up').hide()
-  $('#sign-out').hide()
+  $('#sign-up-holder').hide()
+  $('#sign-out-holder').hide()
   $('#change-password').hide()
 }
 

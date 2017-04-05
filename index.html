@@ -15,17 +15,18 @@
 
 <body class="container-fluid">
   <div class="landing">
-    <div class="sign-in-holder">
+    <div id="sign-in-holder">
       <form id="sign-in">
         <fieldset>
           <legend>Sign in</legend>
           <input type="text" name="credentials[email]" id="sign-in-email" placeholder="email address"> </br>
           <input type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
-          <input type="submit" name="submit" value="Sign in">
+          <input type="submit" name="submit" value="Sign in"><br>
+          <button id="sign-up-button" >Not a user? Sign up!</button>
         </fieldset>
       </form>
     </div>
-    <div class="sign-up-holder">
+    <div id="sign-up-holder">
       <form id="sign-up">
         <fieldset>
           <legend>Sign up</legend>
@@ -36,7 +37,7 @@
         </fieldset>
       </form>
     </div>
-    <div class="sign-out">
+    <div id="sign-out-holder">
     <form id="sign-out">
       <fieldset>
         <legend>Sign out!</legend>

@@ -4,6 +4,9 @@ const store = require('../store.js')
 
 const signUpSuccess = (data) => {
   console.log(data)
+  $('#sign-in-holder').show()
+  $('#sign-up-holder').hide()
+
 }
 
 const signUpFailure = (error) => {
@@ -13,7 +16,7 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   console.log('success', data)
   store.user = data.user
-  $('#sign-in').hide()
+  $('#sign-in-holder').hide()
   $('#game').show()
 }
 
@@ -37,6 +40,10 @@ const changePasswordSuccess = () => {
 const changePasswordFailure = (error) => {
   console.log('changePassword failure ran. error is:', error)
 }
+const showSignUp = () => {
+  $('#sign-in-holder').hide()
+  $('#sign-up-holder').show()
+}
 
 module.exports = {
   signUpSuccess,
@@ -46,5 +53,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   changePasswordSuccess,
-  changePasswordFailure
+  changePasswordFailure,
+  showSignUp
 }
