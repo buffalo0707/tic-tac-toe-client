@@ -28,14 +28,16 @@ const isWin = function (player) {
   })
 }
 
-const gameOver = function () {
-  if (isWin(gameData.oCells) || isWin(gameData.xCells) || gameData.cells.length === 9) {
+const isGameOver = function (currentPlayer) {
+  if (isWin(currentPlayer) === true) {
+    gameData.gameOver = true
+  } else if (gameData.cells.every(function (e, i, a) { return gameData.cells.length === 9 })) {
     gameData.gameOver = true
   }
 }
 
 module.exports = {
   cellsInProgress,
-  gameOver,
+  isGameOver,
   isWin
 }

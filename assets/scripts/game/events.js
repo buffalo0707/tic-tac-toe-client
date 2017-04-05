@@ -1,6 +1,6 @@
 const getFormFields = require(`../../../lib/get-form-fields`)
 const gameData = require(`./data`)
-const logic = require(`./logic`)
+const gameLogic = require(`./logic`)
 
 // const onSignUp = function (event) {
 //   // this refers to event.target
@@ -22,14 +22,19 @@ const nextTurn = function () {
 
 const chooseCell = function (event) {
   event.preventDefault()
-  if (this.innerHTML === '' && gameData.gameOver === false) {
+  if (gameData.gameOver === true) {
+    // do nothing for now
+  } else if (this.innerHTML === '') {
     $('#cell-index-input').attr('value', this.id)
     $('#cell-value-input').attr('value', currentPlayer)
     this.innerHTML = currentPlayer
     gameData.updatePlayerArray(currentPlayer, this.id)
-    console.log(logic.isWin(currentPlayer))
+    gameData.cells.push(this.id)
+    gameLogic.isGameOver(currentPlayer)
     nextTurn()
-  } else { console.log('Space already taken, try again') }
+  } else {
+    // do nothing?
+  }
 }
 
 const addHandlers = () => {

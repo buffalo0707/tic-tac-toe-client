@@ -1,3 +1,4 @@
+const cells = []
 const winningCombos = [
   // rows
   ['0', '1', '2'],
@@ -27,6 +28,7 @@ const updatePlayerArray = function (player, id) {
 }
 
 module.exports = {
+  cells,
   winningCombos,
   oCells,
   xCells,
