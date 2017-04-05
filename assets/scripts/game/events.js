@@ -21,9 +21,9 @@ const onLoad = function () {
 const newGame = function () {
   $('#new-game').hide()
   gameData.resetData()
+  gameData.gameOver = false
   ui.resetBoard()
   currentPlayer = 'x'
-  gameData.gameOver = false
   api.createGame()
   .then(ui.createSuccess)
   .catch(ui.createFailure)

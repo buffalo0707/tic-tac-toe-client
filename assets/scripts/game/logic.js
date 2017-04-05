@@ -31,8 +31,12 @@ const isWin = function (player) {
 const isGameOver = function (currentPlayer) {
   if (isWin(currentPlayer) === true) {
     gameData.gameOver = true
+    $("#game-over-input").attr('value', gameData.gameOver)
+    console.log($("#sign-out-holder").attr('value'))
   } else if (gameData.cells.every(function (e, i, a) { return gameData.cells.length === 9 })) {
     gameData.gameOver = true
+    $("#game-over-input").attr('value', gameData.gameOver)
+    console.log($("#sign-out-holder").attr('value'))
   }
 }
 

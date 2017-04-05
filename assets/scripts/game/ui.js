@@ -1,3 +1,6 @@
+const gameData = require(`./data`)
+const store = require('../store.js')
+
 const initializeSite = function () {
   $('#new-game').hide()
   $('#game').hide()
@@ -11,11 +14,13 @@ const resetBoard = function () {
   for (let i = 0; i < array.length; i++) {
     // remove image from card (flip face down)
     array[i].innerHTML = ''
+    $("#game-over-input").attr('value', gameData.gameOver)
   }
 }
 
 const createSuccess = (data) => {
   console.log('success', data)
+  store.game = data.game
 }
 
 const createFailure = (error) => {
