@@ -16,8 +16,11 @@ const oCells = []
 
 const xCells = []
 
+const gameOver = false
+
 module.exports = {
   winningCombos,
   oCells,
-  xCells
+  xCells,
+  gameOver
 }

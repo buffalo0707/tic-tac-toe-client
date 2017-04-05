@@ -23,7 +23,7 @@ const chooseCell = function (event) {
   event.preventDefault()
   $('#cell-index-input').attr('value', this.id)
   $('#cell-value-input').attr('value', currentPlayer)
-  if (this.innerHTML === '') {
+  if (this.innerHTML === '' || gameData.gameOver === false) {
     this.innerHTML = currentPlayer
     nextTurn()
   } else { console.log('Space already taken, try again') }
