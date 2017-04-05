@@ -15,22 +15,22 @@
 
 <body class="container-fluid">
   <div class="landing">
-    <div id="sign-in-holder">
+    <div class="login-box" id="sign-in-holder">
       <form id="sign-in">
         <fieldset>
           <legend>Sign in</legend>
-          <input type="text" name="credentials[email]" id="sign-in-email" placeholder="email address"> </br>
+          <input type="text" name="credentials[email]" id="sign-in-email" placeholder="email address"></br>
           <input type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
-          <input type="submit" name="submit" value="Sign in"><br>
-          <button id="sign-up-button" >Not a user? Sign up!</button>
+          <input class="submit-button" type="submit" name="submit" value="Sign in"><br>
+          <a id="sign-up-button" >Not a user? Sign up!</a>
         </fieldset>
       </form>
     </div>
-    <div id="sign-up-holder">
+    <div class="login-box" id="sign-up-holder">
       <form id="sign-up">
         <fieldset>
           <legend>Sign up</legend>
-          <input type="text" name="credentials[email]" id="sign-up-email" placeholder="email address"> </br>
+          <input type="text" name="credentials[email]" id="sign-up-email" placeholder="email address"></br>
           <input type="password" name="credentials[password]" id="sign-up-password" placeholder="password"></br>
           <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="confirm password"></br>
           <input type="submit" name="submit" value="Sign up">
