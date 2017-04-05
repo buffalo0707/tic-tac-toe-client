@@ -1,4 +1,6 @@
 const getFormFields = require(`../../../lib/get-form-fields`)
+const gameData = require(`./data`)
+
 // const onSignUp = function (event) {
 //   // this refers to event.target
 //   const data = getFormFields(this)
