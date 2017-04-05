@@ -7,10 +7,11 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   height: 800px;
   clear: left;
 }
+
 h1 {
   clear: left;
   }
-div div {
+.game-cell {
   width: 200px;
   height: 200px;
   float: left;
@@ -25,5 +26,5 @@ div div {
   font-size: 60px
 }
 .hidden {
-  visibility: hidden;
+  display: none;
 }

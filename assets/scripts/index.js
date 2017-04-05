@@ -9,6 +9,7 @@ $(() => {
   setAPIOrigin(location, config)
   authEvents.addHandlers()
   gameEvents.addHandlers()
+  gameEvents.onLoad()
 })
 
 // use require with a reference to bundle the file and use it in this file

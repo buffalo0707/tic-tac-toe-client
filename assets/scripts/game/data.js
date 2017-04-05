@@ -1,4 +1,4 @@
-const cells = []
+let cells = []
 const winningCombos = [
   // rows
   ['0', '1', '2'],
@@ -13,11 +13,11 @@ const winningCombos = [
   ['2', '4', '6']
 ]
 
-const oCells = []
+let oCells = []
 
-const xCells = []
+let xCells = []
 
-const gameOver = false
+let gameOver = false
 
 const updatePlayerArray = function (player, id) {
   if (player === 'o') {
@@ -27,11 +27,24 @@ const updatePlayerArray = function (player, id) {
   }
 }
 
+const resetData = function () {
+  for (let i = cells.length; i > 0; i--) {
+    cells.pop()
+  }
+  for (let i = xCells.length; i > 0; i--) {
+    xCells.pop()
+  }
+  for (let i = oCells.length; i > 0; i--) {
+    oCells.pop()
+  }
+}
+
 module.exports = {
   cells,
   winningCombos,
   oCells,
   xCells,
   gameOver,
-  updatePlayerArray
+  updatePlayerArray,
+  resetData
 }

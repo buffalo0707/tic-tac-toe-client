@@ -1,6 +1,7 @@
 const getFormFields = require(`../../../lib/get-form-fields`)
 const gameData = require(`./data`)
 const gameLogic = require(`./logic`)
+const gameUi = require(`./ui`)
 
 // const onSignUp = function (event) {
 //   // this refers to event.target
@@ -20,10 +21,22 @@ const nextTurn = function () {
   }
 }
 
+const onLoad = function () {
+  gameUi.initializeGame()
+}
+
+const newGame = function () {
+  $('#new-game').hide()
+  gameData.resetData()
+  gameUi.resetBoard()
+  currentPlayer = 'x'
+  gameData.gameOver = false
+}
+
 const chooseCell = function (event) {
   event.preventDefault()
   if (gameData.gameOver === true) {
-    // do nothing for now
+    //do nothing for now
   } else if (this.innerHTML === '') {
     $('#cell-index-input').attr('value', this.id)
     $('#cell-value-input').attr('value', currentPlayer)
@@ -31,6 +44,9 @@ const chooseCell = function (event) {
     gameData.updatePlayerArray(currentPlayer, this.id)
     gameData.cells.push(this.id)
     gameLogic.isGameOver(currentPlayer)
+    if (gameData.gameOver === true) {
+      $('#new-game').show()
+    }
     nextTurn()
   } else {
     // do nothing?
@@ -39,8 +55,10 @@ const chooseCell = function (event) {
 
 const addHandlers = () => {
   $('.cell').on('click', chooseCell)
+  $('#new-game').on('click', newGame)
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onLoad
 }
