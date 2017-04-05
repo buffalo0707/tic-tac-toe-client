@@ -1,12 +1,13 @@
 'use strict'
 
 const store = require('../store.js')
+const gameApi = require('../game/api.js')
+const gameUi = require('../game/ui.js')
 
 const signUpSuccess = (data) => {
   console.log(data)
   $('#sign-in-holder').show()
   $('#sign-up-holder').hide()
-
 }
 
 const signUpFailure = (error) => {
@@ -18,6 +19,9 @@ const signInSuccess = (data) => {
   store.user = data.user
   $('#sign-in-holder').hide()
   $('#game').show()
+  gameApi.createGame()
+  .then(gameUi.createSuccess)
+  .catch(gameUi.createFailure)
 }
 
 const signInFailure = (error) => {
