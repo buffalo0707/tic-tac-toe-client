@@ -3,7 +3,7 @@ const initializeSite = function () {
   $('#game').hide()
   $('#sign-up-holder').hide()
   $('#sign-out-holder').hide()
-  $('#change-password').hide()
+  $('#change-password-holder').hide()
 }
 
 const resetBoard = function () {

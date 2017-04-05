@@ -22,6 +22,9 @@ const signInSuccess = (data) => {
   gameApi.createGame()
   .then(gameUi.createSuccess)
   .catch(gameUi.createFailure)
+  $('#sign-out-holder').hide()
+  $('#sign-out-holder').show()
+  $('#change-password-holder').show()
 }
 
 const signInFailure = (error) => {

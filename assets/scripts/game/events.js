@@ -4,14 +4,6 @@ const gameLogic = require(`./logic`)
 const ui = require(`./ui`)
 const api = require(`./api`)
 
-// const onSignUp = function (event) {
-//   // this refers to event.target
-//   const data = getFormFields(this)
-//   event.preventDefault()
-//   api.signUp(data)
-//     .then(ui.signUpSuccess)
-//     .catch(ui.signUpFailure)
-// }
 let currentPlayer = 'x'
 
 const nextTurn = function () {
