@@ -1,4 +1,5 @@
 const cells = ['', '', '', '', '', '', '', '', '']
+const gameHistory = []
 const winningCombos = [
   // rows
   ['0', '1', '2'],
@@ -46,5 +47,6 @@ module.exports = {
   xCells,
   gameOver,
   updatePlayerArray,
-  resetData
+  resetData,
+  gameHistory
 }

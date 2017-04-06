@@ -1,5 +1,7 @@
 const gameData = require(`./data`)
 const store = require('../store.js')
+const gameLogic = require('./logic.js')
+
 
 const initializeSite = function () {
   $('#new-game').hide()
@@ -36,13 +38,17 @@ const updateFailure = (error) => {
 }
 
 const getSuccess = (data) => {
-  console.log('got games ok. here is the data:', data)
   // need to run something to count games,
-
+  getGameStates(data)
 }
-
 const getFailure = (error) => {
   console.log('failed to get games', error)
+}
+const getGameStates = (data) => {
+  let games = data.games.length
+  let wins = gameLogic.getWinHistory(data)
+  console.log(wins);
+  console.log(games);
 }
 module.exports = {
   initializeSite,
