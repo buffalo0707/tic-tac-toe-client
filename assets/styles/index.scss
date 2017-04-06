@@ -5,22 +5,32 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin: 0 auto;
   text-align: center;
 }
+
 .submit-button {
   margin: 5px;
 }
+
 .game-board {
   margin: 0 auto;
   width: 600px;
   height: 800px;
   clear: left;
 }
+
 h1 {
   clear: left;
   }
+
 .game-cell {
-  width: 200px;
-  height: 200px;
   float: left;
+  height: 200px;
+  width: 200px;
+}
+
+.btn {
+  color: #000000;
+  background-color: #DCDCDC;
+  border: none;
 }
 .cell {
   width: 90%;
@@ -37,12 +47,14 @@ h1 {
 }
 img {
   height: 100%;
+  margin: 0;
   width: 100%;
-  margin: 0
 }
+
 .game-message{
   text-align: center;
 }
+
 .jumbotron{
   color: #DCDCDC;
   text-shadow:
@@ -53,11 +65,12 @@ img {
   background-image: url('../images/lightsabers-clash.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  text-align: center;
 }
+
 .no-margin {
   margin-bottom: -20px
 }
+
 .navbar-toggle.navbar-left {
   float: left;
   margin-left: 10px;

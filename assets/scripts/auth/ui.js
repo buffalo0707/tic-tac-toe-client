@@ -15,7 +15,7 @@ const signUpFailure = () => {
 
 const signInSuccess = (data) => {
   $('#sign-in-modal').modal('hide')
-  $('#sign-in-button').hide()
+  $('#landing').hide()
   $('#sign-in-nav').hide()
   $('#sign-up-nav').hide()
   $('#change-password-nav').show()
