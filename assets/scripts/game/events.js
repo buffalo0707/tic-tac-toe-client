@@ -34,6 +34,7 @@ const chooseCell = function (event) {
   if (gameData.gameOver === true) {
     // do nothing for now
   } else if (this.innerHTML === '') {
+    // update hidden form
     $('#cell-index-input').attr('value', this.id)
     $('#cell-value-input').attr('value', currentPlayer)
     this.innerHTML = '<img src=assets/images/' + currentPlayer + '.jpg>'
@@ -47,7 +48,7 @@ const chooseCell = function (event) {
       $('#new-game').show()
     }
     nextTurn()
-    console.log(gameData.cells);
+    console.log(gameData.cells)
   } else {
     // do nothing?
   }

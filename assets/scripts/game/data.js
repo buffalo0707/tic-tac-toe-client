@@ -1,4 +1,4 @@
-let cells = ['','','','','','','','','']
+const cells = ['', '', '', '', '', '', '', '', '']
 const winningCombos = [
   // rows
   ['0', '1', '2'],
@@ -13,9 +13,9 @@ const winningCombos = [
   ['2', '4', '6']
 ]
 
-let oCells = []
+const oCells = []
 
-let xCells = []
+const xCells = []
 
 let gameOver = false
 

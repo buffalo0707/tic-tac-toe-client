@@ -13,6 +13,7 @@ const signUpSuccess = (data) => {
 
 const signUpFailure = (error) => {
   console.error(error)
+  // need to display error to user
 }
 
 const signInSuccess = (data) => {
@@ -31,6 +32,7 @@ const signInSuccess = (data) => {
 
 const signInFailure = (error) => {
   console.log('failure', error)
+  // Need to display a message to user
 }
 
 const signOutSuccess = () => {
@@ -48,6 +50,7 @@ const changePasswordSuccess = () => {
 
 const changePasswordFailure = (error) => {
   console.log('changePassword failure ran. error is:', error)
+  // need to display message to user
 }
 const showSignUp = () => {
   $('#sign-in-holder').hide()

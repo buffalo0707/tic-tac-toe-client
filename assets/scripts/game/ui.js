@@ -36,11 +36,13 @@ const updateFailure = (error) => {
 }
 
 const getSuccess = (data) => {
-  console.log('got games ok. here is the data:', data);
+  console.log('got games ok. here is the data:', data)
+  // need to run something to count games,
+
 }
 
 const getFailure = (error) => {
-  console.log('failed to get games', error);
+  console.log('failed to get games', error)
 }
 module.exports = {
   initializeSite,

@@ -19,6 +19,7 @@ const isWin = function (player) {
     selectedArray = gameData.oCells
   }
   // for every array in winningCombos array
+  // is there a way to show which cells won?
   return gameData.winningCombos.some(function (array) {
     // check to see if every element inner array combo
     return array.every(function (e) {
@@ -31,6 +32,8 @@ const isWin = function (player) {
 const isGameOver = function (currentPlayer) {
   if (isWin(currentPlayer) === true) {
     gameData.gameOver = true
+    // need to alert user that they won.
+    // is there a way to show which cells won?
   } else if (gameData.xCells.length + gameData.oCells.length === 9) {
     gameData.gameOver = true
   }
