@@ -1,4 +1,5 @@
 const gameData = require(`./data`)
+const ui = require(`./ui`)
 // function used to get all of a player's claimed cells from the cells array
 // will be called when starting an in-progress game returned from the api
 const getWinHistory = function (data) {
@@ -54,12 +55,24 @@ const isWin = function (player) {
 const isGameOver = function (currentPlayer) {
   if (isWin(currentPlayer) === true) {
     gameData.gameOver = true
-    // need to alert user that they won.
-    // is there a way to show which cells won?
+    console.log("You Win!")
+    updateStats(true)
   } else if (gameData.xCells.length + gameData.oCells.length === 9) {
     gameData.gameOver = true
+    console.log("Cat's Game")
+    updateStats()
   }
   $('#game-over-input').attr('value', gameData.gameOver)
+}
+const updateStats = (isWin) => {
+  let games = $('#completed-games').html()
+  let wins = $('#won-games').html()
+  games = +games + 1
+  if (isWin) {
+    wins = +wins + 1
+  }
+  $('#completed-games').html(games)
+  $('#won-games').html(wins)
 }
 
 module.exports = {

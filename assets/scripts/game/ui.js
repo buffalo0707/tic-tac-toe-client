@@ -2,7 +2,6 @@ const gameData = require(`./data`)
 const store = require('../store.js')
 const gameLogic = require('./logic.js')
 
-
 const initializeSite = function () {
   $('#new-game').hide()
   $('#game').hide()
@@ -38,18 +37,28 @@ const updateFailure = (error) => {
 }
 
 const getSuccess = (data) => {
-  // need to run something to count games,
-  getGameStates(data)
+  getGameStats(data)
 }
 const getFailure = (error) => {
   console.log('failed to get games', error)
 }
-const getGameStates = (data) => {
-  let games = data.games.length
-  let wins = gameLogic.getWinHistory(data)
-  console.log(wins);
-  console.log(games);
+const getGameStats = (data) => {
+  const games = data.games.length
+  const wins = gameLogic.getWinHistory(data)
+  $('#completed-games').html(games)
+  $('#won-games').html(wins)
 }
+const updateStats = (isWin) => {
+  let games = $('#completed-games').html()
+  let wins = $('#won-games').html()
+  games = +games + 1
+  if (isWin) {
+    wins = +wins + 1
+  }
+  $('#completed-games').html(games)
+  $('#won-games').html(wins)
+}
+
 module.exports = {
   initializeSite,
   resetBoard,
@@ -58,5 +67,7 @@ module.exports = {
   updateSuccess,
   updateFailure,
   getSuccess,
-  getFailure
+  getFailure,
+  getGameStats,
+  updateStats
 }
