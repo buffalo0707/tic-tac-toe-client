@@ -8,6 +8,8 @@ const initializeSite = function () {
   $('#sign-up-holder').hide()
   $('#sign-out-holder').hide()
   $('#change-password-holder').hide()
+  $('#sign-in-alert').hide()
+  $('#sign-up-alert').hide()
 }
 
 const resetBoard = function () {

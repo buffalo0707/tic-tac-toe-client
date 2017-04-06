@@ -6,18 +6,17 @@ const gameUi = require('../game/ui.js')
 const gameEvents = require('../game/events.js')
 
 const signUpSuccess = (data) => {
-$('#myModal').modal('hide');
-console.log("signed up");
+$('#sign-up-modal').modal('hide')
 }
 
 const signUpFailure = (error) => {
-  console.error(error)
-  // need to display error to user
+    $('#sign-up-alert').show()
 }
 
 const signInSuccess = (data) => {
+  $('#sign-in-modal').modal('hide')
+  $('#login-box').hide()
   store.user = data.user
-  $('#sign-in-holder').hide()
   $('#jumbotron').hide()
   $('#game').show()
   gameApi.createGame()
@@ -30,8 +29,7 @@ const signInSuccess = (data) => {
 }
 
 const signInFailure = (error) => {
-  console.log('failure', error)
-  // Need to display a message to user
+  $('#sign-in-alert').show()
 }
 
 const signOutSuccess = () => {

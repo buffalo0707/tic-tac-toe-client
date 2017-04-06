@@ -18,44 +18,69 @@
     <div class="row">
       <div id="jumbotron" class="jumbotron">
         <h1>GalacTic-Tac-Toe</h1>
-        <p>The epic stuggle of Light vs Dark</p>
+        <p>The epic struggle of Light vs Dark</p>
       </div>
     </div>
   </header>
-  <div class="login-box" id="sign-in-holder">
-    <form id="sign-in">
-      <fieldset>
-        <legend>Sign in</legend>
-        <input class="form-control" type="email" name="credentials[email]" id="sign-in-email" placeholder="email address"></br>
-        <input class="form-control" type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
-        <input class="btn btn-primary" type="submit" name="submit" value="Sign in"><br>
-        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#myModal"> Not a user? Sign up!</button>
-      </fieldset>
-    </form>
+  <div class="row">
+    <div class="col-12-sm login-box">
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+    </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <!-- Sign-inModal -->
+  <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+          <h4 class="modal-title" id="sign-in-modalLabel">Sign In</h4>
         </div>
         <div class="modal-body">
-            <form id="sign-up">
-                <input class="form-control" type="email" name="credentials[email]" id="sign-up-email" placeholder="email address"></br>
-                <input class="form-control" type="password" name="credentials[password]" id="sign-up-password" placeholder="password"></br>
-                <input class="form-control" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="confirm password"></br>
+          <div id="sign-in-alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Uh oh!:</span> Unable to login with this email and password
+          </div>
+          <form id="sign-in">
+            <input class="form-control" type="email" name="credentials[email]" id="sign-in-email" placeholder="email address"></br>
+            <input class="form-control" type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
+            <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#sign-up-modal"> Not a user? Sign up!</button>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-primary">Sign Up</button>
-        </form>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
-
+  <!-- End Modal -->
+  <!-- Sign-up Modal -->
+  <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up-modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="sign-up-modalLabel">Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <div id="sign-up-alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Uh oh!:</span> Sign up failed. You probably did it wrong.
+          </div>
+          <form id="sign-up">
+            <input class="form-control" type="email" name="credentials[email]" id="sign-up-email" placeholder="email address"></br>
+            <input class="form-control" type="password" name="credentials[password]" id="sign-up-password" placeholder="password"></br>
+            <input class="form-control" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="confirm password"></br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
   <div id="sign-out-holder">
     <form id="sign-out">
       <fieldset>
