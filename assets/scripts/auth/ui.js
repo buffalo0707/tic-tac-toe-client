@@ -18,6 +18,7 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   store.user = data.user
   $('#sign-in-holder').hide()
+  $('#jumbotron').hide()
   $('#game').show()
   gameApi.createGame()
   .then(gameUi.createSuccess)
