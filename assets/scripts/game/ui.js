@@ -16,11 +16,11 @@ const resetBoard = function () {
     // remove image from card (flip face down)
     array[i].innerHTML = ''
     $('#game-over-input').attr('value', gameData.gameOver)
+    $('#game-message').html('')
   }
 }
 
 const createSuccess = (data) => {
-  console.log('success', data)
   store.game = data.game
 }
 
@@ -29,7 +29,6 @@ const createFailure = (error) => {
 }
 
 const updateSuccess = (data) => {
-  console.log('update success', data)
 }
 
 const updateFailure = (error) => {
@@ -40,7 +39,6 @@ const getSuccess = (data) => {
   getGameStats(data)
 }
 const getFailure = (error) => {
-  console.log('failed to get games', error)
 }
 const getGameStats = (data) => {
   const games = data.games.length

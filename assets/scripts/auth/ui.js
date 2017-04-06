@@ -6,7 +6,6 @@ const gameUi = require('../game/ui.js')
 const gameEvents = require('../game/events.js')
 
 const signUpSuccess = (data) => {
-  console.log(data)
   $('#sign-in-holder').show()
   $('#sign-up-holder').hide()
 }
@@ -17,7 +16,6 @@ const signUpFailure = (error) => {
 }
 
 const signInSuccess = (data) => {
-  console.log('success', data)
   store.user = data.user
   $('#sign-in-holder').hide()
   $('#game').show()
@@ -38,6 +36,13 @@ const signInFailure = (error) => {
 const signOutSuccess = () => {
   console.log('signOut success ran and nothing was returned')
   store.user = {}
+  $('#new-game').hide()
+  $('#game').hide()
+  $('#sign-up-holder').hide()
+  $('#sign-out-holder').hide()
+  $('#change-password-holder').hide()
+    $('#sign-in-holder').show()
+  // need to change view
 }
 
 const signOutFailure = (error) => {
@@ -45,7 +50,7 @@ const signOutFailure = (error) => {
 }
 
 const changePasswordSuccess = () => {
-  console.log('changePassword success ran and nothing was returned')
+  // need to let user know password was changed
 }
 
 const changePasswordFailure = (error) => {

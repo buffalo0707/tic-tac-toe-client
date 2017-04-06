@@ -48,7 +48,6 @@ const chooseCell = function (event) {
       $('#new-game').show()
     }
     nextTurn()
-    console.log(gameData.cells)
   } else {
     // do nothing?
   }

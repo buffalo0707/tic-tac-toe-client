@@ -14,7 +14,6 @@
 </head>
 
 <body class="container-fluid">
-  <div class="landing">
     <div class="login-box" id="sign-in-holder">
       <form id="sign-in">
         <fieldset>
@@ -54,9 +53,9 @@
       </fieldset>
     </form>
   </div>
-  </div>
   <div id="game" class="game-board">
     <form id="game-form">
+      <div id="game-message" class="game-message"></div>
       <div class="game-cell"><button class='cell' type='button' id="0"></button></div>
       <div class="game-cell"><button class='cell' type='button' id="1"></button></div>
       <div class="game-cell"><button class='cell' type='button' id="2"></button></div>
@@ -74,10 +73,11 @@
     </form>
     <div>Games Played: <span id="completed-games" class="score"></span></div>
     <div>Games Won: <span id="won-games" class="score"></span></div>
+    <div class="game-controls">
+      <div><button class="game-control" type='button' id="new-game">New Game</button></div>
+    </div>
   </div>
-  <div class="game-controls">
-    <div><button class="game-control" type='button' id="new-game">New Game</button></div>
-  </div>
+
 </body>
 
 </html>

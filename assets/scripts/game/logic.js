@@ -55,11 +55,11 @@ const isWin = function (player) {
 const isGameOver = function (currentPlayer) {
   if (isWin(currentPlayer) === true) {
     gameData.gameOver = true
-    console.log("You Win!")
+    $('#game-message').html('You Win!')
     updateStats(true)
   } else if (gameData.xCells.length + gameData.oCells.length === 9) {
     gameData.gameOver = true
-    console.log("Cat's Game")
+    $('#game-message').html('Tie. Try again')
     updateStats()
   }
   $('#game-over-input').attr('value', gameData.gameOver)
