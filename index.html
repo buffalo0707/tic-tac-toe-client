@@ -14,14 +14,21 @@
 </head>
 
 <body class="container-fluid">
+  <div class="row">
+    <div class="jumbotron">
+  <h1>GalacTic-Tac-Toe</h1>
+  <p>The epic stuggle of Light vs Dark</p>
+
+</div>
+  </div>
     <div class="login-box" id="sign-in-holder">
       <form id="sign-in">
         <fieldset>
           <legend>Sign in</legend>
-          <input type="text" name="credentials[email]" id="sign-in-email" placeholder="email address"></br>
-          <input type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
-          <input class="submit-button" type="submit" name="submit" value="Sign in"><br>
-          <a id="sign-up-button" >Not a user? Sign up!</a>
+          <input class="form-control" type="email" name="credentials[email]" id="sign-in-email" placeholder="email address"></br>
+          <input class="form-control" type="password" name="credentials[password]" id="sign-in-password" placeholder="password"></br>
+          <input class="btn btn-primary" type="submit" name="submit" value="Sign in"><br>
+          <a id="sign-up-button">Not a user? Sign up!</a>
         </fieldset>
       </form>
     </div>
@@ -29,10 +36,10 @@
       <form id="sign-up">
         <fieldset>
           <legend>Sign up</legend>
-          <input type="text" name="credentials[email]" id="sign-up-email" placeholder="email address"></br>
-          <input type="password" name="credentials[password]" id="sign-up-password" placeholder="password"></br>
-          <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="confirm password"></br>
-          <input type="submit" name="submit" value="Sign up">
+          <input class="form-control" type="email" name="credentials[email]" id="sign-up-email" placeholder="email address"></br>
+          <input class="form-control" type="password" name="credentials[password]" id="sign-up-password" placeholder="password"></br>
+          <input class="form-control" type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="confirm password"></br>
+          <input class="btn btn-primary" type="submit" name="submit" value="Sign up">
         </fieldset>
       </form>
     </div>
