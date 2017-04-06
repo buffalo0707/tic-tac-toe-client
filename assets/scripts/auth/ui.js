@@ -22,8 +22,7 @@ const signInSuccess = (data) => {
   gameApi.createGame()
   .then(gameUi.createSuccess)
   .catch(gameUi.createFailure)
-  $('#sign-out-holder').hide()
-  $('#sign-out-holder').show()
+  $('#sign-out').show()
   $('#change-password-holder').show()
   gameEvents.getAllGames()
 }
@@ -33,14 +32,8 @@ const signInFailure = (error) => {
 }
 
 const signOutSuccess = () => {
-  console.log('signOut success ran and nothing was returned')
   store.user = {}
-  $('#new-game').hide()
-  $('#game').hide()
-  $('#sign-up-holder').hide()
-  $('#sign-out-holder').hide()
-  $('#change-password-holder').hide()
-    $('#sign-in-holder').show()
+  gameUi.initializeSite()
   // need to change view
 }
 

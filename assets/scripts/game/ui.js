@@ -3,10 +3,11 @@ const store = require('../store.js')
 const gameLogic = require('./logic.js')
 
 const initializeSite = function () {
+  $('#jumbotron').show()
   $('#new-game').hide()
   $('#game').hide()
   $('#sign-up-holder').hide()
-  $('#sign-out-holder').hide()
+  $('#sign-out').hide()
   $('#change-password-holder').hide()
   $('#sign-in-alert').hide()
   $('#sign-up-alert').hide()
