@@ -6,8 +6,8 @@ const gameUi = require('../game/ui.js')
 const gameEvents = require('../game/events.js')
 
 const signUpSuccess = (data) => {
-  $('#sign-in-holder').show()
-  $('#sign-up-holder').hide()
+$('#myModal').modal('hide');
+console.log("signed up");
 }
 
 const signUpFailure = (error) => {
