@@ -6,11 +6,11 @@ const gameUi = require('../game/ui.js')
 const gameEvents = require('../game/events.js')
 
 const signUpSuccess = (data) => {
-$('#sign-up-modal').modal('hide')
+  $('#sign-up-modal').modal('hide')
 }
 
-const signUpFailure = (error) => {
-    $('#sign-up-alert').show()
+const signUpFailure = () => {
+  $('#sign-up-alert').show()
 }
 
 const signInSuccess = (data) => {
@@ -18,6 +18,7 @@ const signInSuccess = (data) => {
   $('#sign-in-button').hide()
   $('#sign-in-nav').hide()
   $('#sign-up-nav').hide()
+  $('#change-password-nav').show()
   store.user = data.user
   $('#jumbotron').hide()
   $('#game').show()
@@ -29,7 +30,7 @@ const signInSuccess = (data) => {
   gameEvents.getAllGames()
 }
 
-const signInFailure = (error) => {
+const signInFailure = () => {
   $('#sign-in-alert').show()
 }
 
@@ -47,9 +48,8 @@ const changePasswordSuccess = () => {
   // need to let user know password was changed
 }
 
-const changePasswordFailure = (error) => {
-  console.log('changePassword failure ran. error is:', error)
-  // need to display message to user
+const changePasswordFailure = () => {
+  $('#change-password-alert').show()
 }
 const showSignUp = () => {
   $('#sign-in-holder').hide()
