@@ -46,7 +46,7 @@ const showSignUp = function () {
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-  $('#sign-out').on('click', onSignOut)
+  $('#sign-out-nav').on('click', onSignOut)
   $('#change-password').on('submit', onChangePassword)
 }
 

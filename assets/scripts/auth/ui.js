@@ -15,14 +15,16 @@ const signUpFailure = (error) => {
 
 const signInSuccess = (data) => {
   $('#sign-in-modal').modal('hide')
-  $('#login-box').hide()
+  $('#sign-in-button').hide()
+  $('#sign-in-nav').hide()
+  $('#sign-up-nav').hide()
   store.user = data.user
   $('#jumbotron').hide()
   $('#game').show()
   gameApi.createGame()
   .then(gameUi.createSuccess)
   .catch(gameUi.createFailure)
-  $('#sign-out').show()
+  $('#sign-out-nav').show()
   $('#change-password-holder').show()
   gameEvents.getAllGames()
 }

@@ -7,10 +7,14 @@ const initializeSite = function () {
   $('#new-game').hide()
   $('#game').hide()
   $('#sign-up-holder').hide()
-  $('#sign-out').hide()
+  $('#sign-out.nav').hide()
   $('#change-password-holder').hide()
   $('#sign-in-alert').hide()
   $('#sign-up-alert').hide()
+  $('#sign-in-button').show()
+  $('#sign-in-nav').show()
+  $('#sign-out-nav').hide()
+  $('#sign-up-nav').show()
 }
 
 const resetBoard = function () {
