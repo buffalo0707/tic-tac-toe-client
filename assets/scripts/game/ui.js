@@ -12,10 +12,13 @@ const resetBoard = function () {
   for (let i = 0; i < array.length; i++) {
     // remove image from card (flip face down)
     array[i].src = 'http://i.imgur.com/BiJgF5Z.jpg'
-    $('#game-over-input').attr('value', gameData.gameOver)
-    $('#game-message').html('Let the battle begin!')
-    $('#game-message').removeClass('alert-success')
+    array[i].classList.remove('winner')
   }
+  $('#game-over-input').attr('value', gameData.gameOver)
+  $('#game-message').html('Let the battle begin!')
+  $('#game-message').removeClass('alert-success')
+  $('#game-message').removeClass('alert-warning')
+
 }
 
 const createSuccess = (data) => {
@@ -54,6 +57,8 @@ const updateStats = (isWin) => {
   $('#completed-games').html(games)
   $('#won-games').html(wins)
 }
+
+
 
 module.exports = {
   initializeSite,

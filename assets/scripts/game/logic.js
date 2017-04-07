@@ -1,4 +1,5 @@
 const gameData = require(`./data`)
+const ui = require(`./ui`)
 // function used to get all of a player's claimed cells from the cells array
 // will be called when starting an in-progress game returned from the api
 const getWinHistory = function (data) {
@@ -22,6 +23,9 @@ const getWinHistory = function (data) {
   return result
 }
 
+
+
+
 const selectedCells = function (array, player) {
   const result = []
   array.forEach(function (element, index) {
@@ -39,17 +43,21 @@ const isWin = function (player) {
   } else {
     selectedArray = gameData.oCells
   }
-  // for every array in winningCombos array
-  // is there a way to show which cells won?
-  return gameData.winningCombos.some(function (array) {
-    // check to see if every element inner array combo
-    return array.every(function (e) {
-      // is present in array of cells selected by player
+  for (let i = 0; i < gameData.winningCombos.length; i++) {
+    if (gameData.winningCombos[i].every(function (e) {
       return selectedArray.indexOf(e) !== -1
-    })
-  })
+    }) === true) {
+      gameData.winningCombos[i].forEach(function (e, i, a) {
+        $('#' + a[i]).addClass('winner')
+      })
+      console.log('the winning array is', gameData.winningCombos[i])
+      return true
+    }
+  }
 }
-
+const highlightWin = function (array) {
+    array
+}
 const isGameOver = function (currentPlayer) {
   if (isWin(currentPlayer) === true) {
     gameData.gameOver = true
