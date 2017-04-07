@@ -43,7 +43,6 @@ const chooseCell = function (event) {
     } else {
         this.setAttribute('src', 'http://i.imgur.com/chXYzaK.jpg')
     }
-    this.setAttribute('src', './assets/images/' + currentPlayer + '.jpg')
     gameData.updatePlayerArray(currentPlayer, this.id)
     gameData.cells[this.id] = currentPlayer
     gameLogic.isGameOver(currentPlayer)
