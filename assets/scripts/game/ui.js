@@ -3,21 +3,8 @@ const store = require('../store.js')
 const gameLogic = require('./logic.js')
 
 const initializeSite = function () {
-  $('#jumbotron').show()
-  $('#new-game').hide()
-  $('#game').hide()
-  $('#sign-up-holder').hide()
-  $('#sign-out.nav').hide()
-  $('#change-password-nav').hide()
-  $('#sign-in-alert').hide()
-  $('#sign-up-alert').hide()
-  $('#change-password-alert').hide()
-  $('#sign-in-button').show()
-  $('#sign-in-nav').show()
-  $('#sign-out-nav').hide()
-  $('#sign-up-nav').show()
-  $('#landing').show()
-  $('#stats-nav').hide()
+  $('#sign-in-button, #sign-in-nav, #jumbotron, #sign-up-nav, #landing').show()
+  $('#new-game, #game, #sign-out.nav, #change-password-nav, #sign-in-alert, #sign-up-alert, #change-password-alert, #sign-out-nav, #stats-nav').hide()
 }
 
 const resetBoard = function () {
