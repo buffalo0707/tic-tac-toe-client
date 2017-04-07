@@ -47,7 +47,7 @@ const signOutFailure = (error) => {
 }
 
 const changePasswordSuccess = () => {
-  // need to let user know password was changed
+  $('#change-password-modal').modal('hide')
 }
 
 const changePasswordFailure = () => {
