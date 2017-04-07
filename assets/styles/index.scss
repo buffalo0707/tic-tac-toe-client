@@ -10,13 +10,6 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin: 5px;
 }
 
-.game-board {
-  margin: 0 auto;
-  width: 600px;
-  height: 800px;
-  clear: left;
-}
-
 h1 {
   clear: left;
   }
@@ -25,18 +18,9 @@ h1 {
   height: auto;
 }
 
-.btn {
-  color: #000000;
-  background-color: #DCDCDC;
-  border: none;
-}
-
 .cell {
-  width: 90%;
+  width: 100%;
   height: 100%;
-  border: 1px solid;
-  float: left;
-  font-size: 100px;
 
 }
 
@@ -69,4 +53,8 @@ img {
 .navbar-toggle.navbar-left {
   float: left;
   margin-left: 10px;
+}
+
+.control {
+  margin: 10px
 }

@@ -20,6 +20,7 @@
         <div class="navbar-header">
           <button type="button" class="navbar-left navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
+        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
       </button>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -138,29 +139,32 @@
   </div>
   <!-- End Modal -->
 <section id="game" class:"game-board">
-    <form id="game-form">
-      <div id="game-message" class="game-message"></div>
+  <div class="row">
+    <div class="col-md-3"></div>
+      <div id="game-message" class="col-xs-12 col-md-6 alert" role="alert">Let the battle begin!</div>
+      <div class="col-md-3"></div>
+    </div>
+        <form id="game-form">
         <div class="row">
-        <div class="col-sm-3">
-        </div>
-        <div class="col-sm-2"><input type="image" src="/assets/images/blank.jpg" class="cell" id="0"></div>
-        <div class="col-sm-2"><input type="image" src="/assets/images/blank.jpg" class="cell" id="1"></div>
-        <div class="col-sm-2"><input type="image" src="/assets/images/blank.jpg" class="cell" id="2"></div>
-        <div class="col-sm-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-xs-4 col-md-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="0"></div>
+        <div class="col-xs-4 col-md-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="1"></div>
+        <div class="col-xs-4 col-md-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="2"></div>
+        <div class="col-md-3"></div>
       </div>
       <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-2"><input type="image" src="/assets/images/blank.jpg" class="cell" id="3"></div>
-        <div class="col-sm-2"><input type="image" src="/assets/images/blank.jpg" class="cell" id="4"></div>
-        <div class="col-sm-2"><input type="image" src="/assets/images/blank.jpg" class="cell" id="5"></div>
-        <div class="col-sm-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-xs-4 col-md-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="3"></div>
+        <div class="col-xs-4 col-md-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="4"></div>
+        <div class="col-xs-4 col-md-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="5"></div>
+        <div class="col-md-3"></div>
       </div>
       <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-2"><input type="image" src="/assets/images/blank.jpg" class="cell" id="6"></div>
-        <div class="col-sm-2"><input type="image" src="/assets/images/blank.jpg" class="cell" id="7"></div>
-        <div class="col-sm-2"><input type="image" src="/assets/images/blank.jpg" class="cell" id="8"></div>
-        <div class="col-sm-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-xs-4 col-md-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="6"></div>
+        <div class="col-xs-4 col-md-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="7"></div>
+        <div class="col-xs-4 col-md-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="8"></div>
+        <div class="col-md-3"></div>
       </div>
       <div class="hidden">
         <input id="cell-index-input" name="game[cell][index]" type="text" value=".">
@@ -169,14 +173,13 @@
       </div>
       </form>
       <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
+        <div class="col-sm-5"></div>
+          <div class="col-sm-2 text-center control">
+            <div><button class="btn btn-primary" type="button" id="new-game">New Game</button></div>
+          </div>
       </div>
-      <div class="col-sm-3"></div>
-      </div>
-      <div class="game-controls">
-        <div><button class="game-control" type="button" id="new-game">New Game</button></div>
-      </div>
+      <div class="col-sm-5"></div>
+
       <!-- Stats-inModal -->
       <div class="modal fade" id="stats-modal" tabindex="-1" role="dialog" aria-labelledby="stats-modalLabel">
         <div class="modal-dialog" role="document">

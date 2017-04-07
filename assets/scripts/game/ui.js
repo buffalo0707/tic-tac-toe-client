@@ -26,7 +26,8 @@ const resetBoard = function () {
     // remove image from card (flip face down)
     array[i].innerHTML = ''
     $('#game-over-input').attr('value', gameData.gameOver)
-    $('#game-message').html('')
+    $('#game-message').html('Let the battle begin!')
+    $('#game-message').removeClass('alert-success')
   }
 }
 
