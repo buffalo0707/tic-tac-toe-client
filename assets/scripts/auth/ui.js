@@ -55,9 +55,16 @@ const changePasswordSuccess = () => {
 const changePasswordFailure = () => {
   $('#change-password-alert').show()
 }
+
 const showSignUp = () => {
   $('#sign-in-holder').hide()
   $('#sign-up-holder').show()
+}
+
+const clearSignIn = () => {
+  $('#sign-in-email').val('')
+  $('#sign-in-password').val('')
+  $('#sign-in-alert').hide('')
 }
 
 module.exports = {
@@ -69,5 +76,6 @@ module.exports = {
   signOutFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  showSignUp
+  showSignUp,
+  clearSignIn
 }
