@@ -24,15 +24,16 @@ const createSuccess = (data) => {
   store.game = data.game
 }
 
-const createFailure = (error) => {
-  console.log('failure', error)
+const createFailure = () => {
+  // do nothing
 }
 
-const updateSuccess = (data) => {
+const updateSuccess = () => {
+  // do nothing
 }
 
-const updateFailure = (error) => {
-  console.log('failure', error)
+const updateFailure = () => {
+  // do nothing
 }
 
 const getSuccess = (data) => {

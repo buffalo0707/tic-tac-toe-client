@@ -41,8 +41,8 @@ const signOutSuccess = () => {
   // need to change view
 }
 
-const signOutFailure = (error) => {
-  console.log('signOut failure ran. error is:', error)
+const signOutFailure = () => {
+  // do nothing
 }
 
 const changePasswordSuccess = () => {

@@ -46,7 +46,6 @@ const isWin = function (player) {
       gameData.winningCombos[i].forEach(function (e, i, a) {
         $('#' + a[i]).addClass('winner')
       })
-      console.log('the winning array is', gameData.winningCombos[i])
       return true
     }
   }
