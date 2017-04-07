@@ -35,6 +35,9 @@
           <ul class="nav navbar-nav navbar-left">
             <li id="change-password-nav" data-toggle="modal" data-target="#change-password-modal"><a href=#>Change Password</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-left">
+            <li id="stats-nav" data-toggle="modal" data-target="#stats-modal"><a href=#>Statistics</a></li>
+          </ul>
         </div>
         <!-- /.navbar-collapse -->
       </div>
@@ -46,13 +49,13 @@
     </div>
   </header>
   <div id="landing">
-  <p class="lead text-center">Sign in to join the fight.</p>
-  <div class="row">
-    <div id="sign-in-button" class="col-12-sm login-box">
-      <button type="button" class="btn btn-primary btn-lg center-button" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+    <p class="lead text-center">Sign in to join the fight.</p>
+    <div class="row">
+      <div id="sign-in-button" class="col-12-sm login-box">
+        <button type="button" class="btn btn-primary btn-lg center-button" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+      </div>
     </div>
   </div>
-</div>
   <!-- Sign-inModal -->
   <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modalLabel">
     <div class="modal-dialog" role="document">
@@ -134,32 +137,68 @@
     </div>
   </div>
   <!-- End Modal -->
-
-  <div id="game" class="game-board">
+<section id="game" class:"game-board">
     <form id="game-form">
       <div id="game-message" class="game-message"></div>
-      <div class="game-cell"><button class='cell' type='button' id="0"></button></div>
-        <div class="game-cell"><button class='cell' type='button' id="1"></button></div>
-        <div class="game-cell"><button class='cell' type='button' id="2"></button></div>
-        <div class="game-cell"><button class='cell' type='button' id="3"></button></div>
-        <div class="game-cell"><button class='cell' type='button' id="4"></button></div>
-        <div class="game-cell"><button class='cell' type='button' id="5"></button></div>
-        <div class="game-cell"><button class='cell' type='button' id="6"></button></div>
-        <div class="game-cell"><button class='cell' type='button' id="7"></button></div>
-        <div class="game-cell"><button class='cell' type='button' id="8"></button></div>
-        <div class="hidden">
-          <input id="cell-index-input" name="game[cell][index]" type="text" value=".">
-          <input id="cell-value-input" name="game[cell][value]" type="text" value=".">
-          <input id="game-over-input" name="game[over]" type="text" value="false">
+        <div class="row">
+        <div class="col-sm-3">
         </div>
-        </form>
-        <div>Games Played: <span id="completed-games" class="score"></span></div>
-        <div>Games Won: <span id="won-games" class="score"></span></div>
-        <div class="game-controls">
-          <div><button class="game-control" type='button' id="new-game">New Game</button></div>
+        <div class="col-sm-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="0" /></div>
+        <div class="col-sm-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="1" /></div>
+        <div class="col-sm-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="2" /></div>
+        <div class="col-sm-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="3" /></div>
+        <div class="col-sm-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="4" /></div>
+        <div class="col-sm-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="5" /></div>
+        <div class="col-sm-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="6" /></div>
+        <div class="col-sm-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="7" /></div>
+        <div class="col-sm-2"><input type="image" src="./assets/images/blank.jpg" class="cell" id="8" /></div>
+        <div class="col-sm-3"></div>
+      </div>
+      <div class="hidden">
+        <input id="cell-index-input" name="game[cell][index]" type="text" value=".">
+        <input id="cell-value-input" name="game[cell][value]" type="text" value=".">
+        <input id="game-over-input" name="game[over]" type="text" value="false">
+      </div>
+      </form>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+      </div>
+      <div class="col-sm-3"></div>
+      </div>
+      <div class="game-controls">
+        <div><button class="game-control" type="button" id="new-game">New Game</button></div>
+      </div>
+      <!-- Stats-inModal -->
+      <div class="modal fade" id="stats-modal" tabindex="-1" role="dialog" aria-labelledby="stats-modalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="stats-modalLabel">Historical Stats</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <p class="lead">Games Played: <span id="completed-games" class="score"></span></p>
+                <p class="lead">Games Won: <span id="won-games" class="score"></span></p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+          </div>
         </div>
       </div>
-
+      <!-- End Modal -->
+    </section>
 </body>
 
 </html>

@@ -19,6 +19,8 @@ const signInSuccess = (data) => {
   $('#sign-in-nav').hide()
   $('#sign-up-nav').hide()
   $('#change-password-nav').show()
+  $('#sign-out-nav').show()
+  $('#stats-nav').show()
   store.user = data.user
   $('#jumbotron').hide()
   $('#game').show()

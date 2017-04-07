@@ -30,14 +30,15 @@ const newGame = function () {
 }
 
 const chooseCell = function (event) {
+  console.log("clicked");
   event.preventDefault()
   if (gameData.gameOver === true) {
     // do nothing for now
-  } else if (this.innerHTML === '') {
+  } else if (this.getAttribute('src') === './assets/images/blank.jpg') {
     // update hidden form
     $('#cell-index-input').attr('value', this.id)
     $('#cell-value-input').attr('value', currentPlayer)
-    this.innerHTML = '<img src=assets/images/' + currentPlayer + '.jpg>'
+    this.setAttribute('src', './assets/images/' + currentPlayer + '.jpg')
     gameData.updatePlayerArray(currentPlayer, this.id)
     gameData.cells[this.id] = currentPlayer
     gameLogic.isGameOver(currentPlayer)
@@ -45,7 +46,7 @@ const chooseCell = function (event) {
     $('#game-form').submit(event, onGameFormSubmit)
     $('#game-form').trigger('submit')
     if (gameData.gameOver === true) {
-      $('#new-game').show()
+    $('#new-game').show()
     }
     nextTurn()
   } else {

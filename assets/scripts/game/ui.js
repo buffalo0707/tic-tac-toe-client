@@ -17,6 +17,7 @@ const initializeSite = function () {
   $('#sign-out-nav').hide()
   $('#sign-up-nav').show()
   $('#landing').show()
+  $('#stats-nav').hide()
 }
 
 const resetBoard = function () {
