@@ -11,7 +11,7 @@ const resetBoard = function () {
   const array = document.getElementsByClassName('cell')
   for (let i = 0; i < array.length; i++) {
     // remove image from card (flip face down)
-    array[i].src = "http://i.imgur.com/BiJgF5Z.jpg"
+    array[i].src = 'http://i.imgur.com/BiJgF5Z.jpg'
     $('#game-over-input').attr('value', gameData.gameOver)
     $('#game-message').html('Let the battle begin!')
     $('#game-message').removeClass('alert-success')
@@ -36,7 +36,7 @@ const updateFailure = (error) => {
 const getSuccess = (data) => {
   getGameStats(data)
 }
-const getFailure = (error) => {
+const getFailure = () => {
 }
 const getGameStats = (data) => {
   const games = data.games.length

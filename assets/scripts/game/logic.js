@@ -1,5 +1,4 @@
 const gameData = require(`./data`)
-const ui = require(`./ui`)
 // function used to get all of a player's claimed cells from the cells array
 // will be called when starting an in-progress game returned from the api
 const getWinHistory = function (data) {
@@ -32,7 +31,6 @@ const selectedCells = function (array, player) {
   })
   return result
 }
-
 
 const isWin = function (player) {
   let selectedArray = []

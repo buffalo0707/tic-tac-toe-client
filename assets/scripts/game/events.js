@@ -30,7 +30,7 @@ const newGame = function () {
 }
 
 const chooseCell = function (event) {
-  console.log("clicked");
+  console.log('clicked')
   event.preventDefault()
   if (gameData.gameOver === true) {
     // do nothing for now
@@ -41,7 +41,7 @@ const chooseCell = function (event) {
     if (currentPlayer === 'x') {
       this.setAttribute('src', 'http://i.imgur.com/inG89Ay.jpg')
     } else {
-        this.setAttribute('src', 'http://i.imgur.com/chXYzaK.jpg')
+      this.setAttribute('src', 'http://i.imgur.com/chXYzaK.jpg')
     }
     gameData.updatePlayerArray(currentPlayer, this.id)
     gameData.cells[this.id] = currentPlayer
@@ -50,7 +50,7 @@ const chooseCell = function (event) {
     $('#game-form').submit(event, onGameFormSubmit)
     $('#game-form').trigger('submit')
     if (gameData.gameOver === true) {
-    $('#new-game').show()
+      $('#new-game').show()
     }
     nextTurn()
   } else {

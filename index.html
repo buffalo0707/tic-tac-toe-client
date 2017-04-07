@@ -39,6 +39,9 @@
           <ul class="nav navbar-nav navbar-left">
             <li id="stats-nav" data-toggle="modal" data-target="#stats-modal"><a href=#>Statistics</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-left">
+            <li id="about-nav" data-toggle="modal" data-target="#about-modal"><a href=#>About</a></li>
+          </ul>
         </div>
         <!-- /.navbar-collapse -->
       </div>
@@ -111,7 +114,7 @@
     </div>
   </div>
   <!-- End Modal -->
-  <!-- Sign-up Modal -->
+  <!-- Change Password Modal -->
   <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="change-password-modalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -133,6 +136,33 @@
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           <button type="submit" class="btn btn-primary">Change Password<button>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
+  <!-- About Modal -->
+  <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="about-modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="about-modalLabel">About</h4>
+        </div>
+        <div class="modal-body">
+          <div class="page-header">
+            <h1>GalacTic-Tac-Toe<br>
+              <small> by Alan Henderson</small></h1>
+            <p class="lead">This site was made with love using:</p>
+            <ul class="list-group">
+              <li class="list-group-item">HTML/CSS</li>
+              <li class="list-group-item">JavaScript</li>
+              <li class="list-group-item">Bootstrap</li>
+              <li class="list-group-item">Ruby on Rails</li>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
         </div>
       </div>
     </div>

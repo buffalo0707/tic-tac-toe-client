@@ -18,7 +18,7 @@ const oCells = []
 
 const xCells = []
 
-let gameOver = false
+const gameOver = false
 
 const updatePlayerArray = function (player, id) {
   if (player === 'o') {
