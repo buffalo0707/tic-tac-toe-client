@@ -58,3 +58,8 @@ img {
 .control {
   margin: 10px
 }
+
+.cell:hover {
+  border: 2px solid black;
+  border-radius: 10px;
+}
