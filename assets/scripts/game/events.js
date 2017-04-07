@@ -30,18 +30,17 @@ const newGame = function () {
 }
 
 const chooseCell = function (event) {
-  console.log('clicked')
   event.preventDefault()
   if (gameData.gameOver === true) {
     // do nothing for now
-  } else if (this.getAttribute('src') === 'http://i.imgur.com/BiJgF5Z.jpg') {
+  } else if (this.getAttribute('src') === 'https://i.imgur.com/BiJgF5Z.jpg') {
     // update hidden form
     $('#cell-index-input').attr('value', this.id)
     $('#cell-value-input').attr('value', currentPlayer)
     if (currentPlayer === 'x') {
-      this.setAttribute('src', 'http://i.imgur.com/inG89Ay.jpg')
+      this.setAttribute('src', 'https://i.imgur.com/inG89Ay.jpg')
     } else {
-      this.setAttribute('src', 'http://i.imgur.com/chXYzaK.jpg')
+      this.setAttribute('src', 'https://i.imgur.com/chXYzaK.jpg')
     }
     gameData.updatePlayerArray(currentPlayer, this.id)
     gameData.cells[this.id] = currentPlayer

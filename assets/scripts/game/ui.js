@@ -11,7 +11,7 @@ const resetBoard = function () {
   const array = document.getElementsByClassName('cell')
   for (let i = 0; i < array.length; i++) {
     // remove image from card (flip face down)
-    array[i].src = 'http://i.imgur.com/BiJgF5Z.jpg'
+    array[i].src = 'https://i.imgur.com/BiJgF5Z.jpg'
     array[i].classList.remove('winner')
   }
   $('#game-over-input').attr('value', gameData.gameOver)
