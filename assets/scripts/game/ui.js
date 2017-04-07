@@ -18,7 +18,6 @@ const resetBoard = function () {
   $('#game-message').html('Let the battle begin!')
   $('#game-message').removeClass('alert-success')
   $('#game-message').removeClass('alert-warning')
-
 }
 
 const createSuccess = (data) => {
@@ -57,8 +56,6 @@ const updateStats = (isWin) => {
   $('#completed-games').html(games)
   $('#won-games').html(wins)
 }
-
-
 
 module.exports = {
   initializeSite,

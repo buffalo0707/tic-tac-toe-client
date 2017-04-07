@@ -31,16 +31,11 @@ const onSignOut = function (event) {
 }
 
 const onChangePassword = function (event) {
-  console.log('this is happening');
   const data = getFormFields(this)
   event.preventDefault()
   api.changePassword(data)
   .then(ui.changePasswordSuccess)
   .catch(ui.changePasswordFailure)
-}
-
-const showSignUp = function () {
-  ui.showSignUp()
 }
 
 const addHandlers = () => {
