@@ -49,6 +49,7 @@ const getGameStats = (data) => {
   $('#completed-games').html(games)
   $('#won-games').html(wins)
 }
+
 const updateStats = (isWin) => {
   let games = $('#completed-games').html()
   let wins = $('#won-games').html()
