@@ -38,8 +38,10 @@ const updateFailure = (error) => {
 const getSuccess = (data) => {
   getGameStats(data)
 }
+
 const getFailure = () => {
 }
+
 const getGameStats = (data) => {
   const games = data.games.length
   const wins = gameLogic.getWinHistory(data)

@@ -57,7 +57,11 @@ const isGameOver = function (currentPlayer) {
     gameData.gameOver = true
     $('#game-message').html('Player ' + currentPlayer.toUpperCase() + ' wins!')
     $('#game-message').addClass('alert-success')
-    updateStats(true)
+    if (currentPlayer === 'x') {
+      updateStats(true)
+    } else {
+      updateStats()
+    }
   } else if (gameData.xCells.length + gameData.oCells.length === 9) {
     gameData.gameOver = true
     $('#game-message').html('Tie. Try again')
