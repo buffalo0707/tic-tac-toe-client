@@ -34,10 +34,15 @@ const chooseCell = function (event) {
   event.preventDefault()
   if (gameData.gameOver === true) {
     // do nothing for now
-  } else if (this.getAttribute('src') === './assets/images/blank.jpg') {
+  } else if (this.getAttribute('src') === 'http://i.imgur.com/BiJgF5Z.jpg') {
     // update hidden form
     $('#cell-index-input').attr('value', this.id)
     $('#cell-value-input').attr('value', currentPlayer)
+    if (currentPlayer === 'x') {
+      this.setAttribute('src', 'http://i.imgur.com/inG89Ay.jpg')
+    } else {
+        this.setAttribute('src', 'http://i.imgur.com/chXYzaK.jpg')
+    }
     this.setAttribute('src', './assets/images/' + currentPlayer + '.jpg')
     gameData.updatePlayerArray(currentPlayer, this.id)
     gameData.cells[this.id] = currentPlayer
