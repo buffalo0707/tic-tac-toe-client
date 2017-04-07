@@ -21,14 +21,13 @@ const signInSuccess = (data) => {
   $('#change-password-nav').show()
   $('#sign-out-nav').show()
   $('#stats-nav').show()
-  store.user = data.user
   $('#jumbotron').hide()
   $('#game').show()
+  store.user = data.user
   gameApi.createGame()
   .then(gameUi.createSuccess)
   .catch(gameUi.createFailure)
   $('#sign-out-nav').show()
-  $('#change-password-holder').show()
   gameEvents.getAllGames()
 }
 
@@ -48,6 +47,9 @@ const signOutFailure = (error) => {
 
 const changePasswordSuccess = () => {
   $('#change-password-modal').modal('hide')
+  $('#current-password').val('')
+  $('#new-password').val('')
+  $('#change-password-alert').hide()
 }
 
 const changePasswordFailure = () => {
