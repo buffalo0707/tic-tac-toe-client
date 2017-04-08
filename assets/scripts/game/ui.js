@@ -4,7 +4,7 @@ const gameLogic = require('./logic.js')
 
 const initializeSite = function () {
   $('#sign-in-button, #sign-in-nav, #jumbotron, #sign-up-nav, #landing').show()
-  $('#new-game, #game, #sign-out.nav, #change-password-nav, #sign-in-alert, #sign-up-alert, #change-password-alert, #sign-out-nav, #stats-nav, #game-selection').hide()
+  $('#new-game, #game, #sign-out.nav, #change-password-nav, #sign-in-alert, #sign-up-alert, #change-password-alert, #sign-out-nav, #stats-nav, #game-selection, #online-options').hide()
 }
 
 const resetBoard = function () {

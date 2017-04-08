@@ -28,13 +28,18 @@ const signInSuccess = (data) => {
 }
 
 const startGame = () => {
-    $('#game').show()
-    $('#game-selection').hide()
+  $('#game').show()
+  $('#game-selection').hide()
   gameApi.createGame()
   .then(gameUi.createSuccess)
   .catch(gameUi.createFailure)
   $('#sign-out-nav').show()
   gameEvents.getAllGames()
+}
+
+const onlineGame = () => {
+  $('#game-selection').hide()
+  $('#online-options').show()
 }
 
 const signInFailure = () => {
@@ -84,5 +89,6 @@ module.exports = {
   changePasswordFailure,
   showSignUp,
   clearSignIn,
-  startGame
+  startGame,
+  onlineGame
 }
