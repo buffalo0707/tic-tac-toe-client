@@ -18,15 +18,15 @@ const signInSuccess = (data) => {
   $('#landing').hide()
   $('#sign-in-nav').hide()
   $('#sign-up-nav').hide()
+  $('#game-selection').show()
   $('#change-password-nav').show()
   $('#sign-out-nav').show()
   $('#stats-nav').show()
   $('#jumbotron').hide()
-  $('#game').show()
-  store.user = data.user
-  gameApi.createGame()
-  .then(gameUi.createSuccess)
-  .catch(gameUi.createFailure)
+  // store.user = data.user
+  // gameApi.createGame()
+  // .then(gameUi.createSuccess)
+  // .catch(gameUi.createFailure)
   $('#sign-out-nav').show()
   gameEvents.getAllGames()
 }
