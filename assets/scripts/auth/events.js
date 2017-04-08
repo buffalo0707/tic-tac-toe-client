@@ -45,6 +45,7 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword)
   $('#change-password-cancel').on('click', ui.changePasswordSuccess)
   $('#sign-in-cancel, #sign-in-sign-up').on('click', ui.clearSignIn)
+  $('#local-game').on('click', ui.startGame)
 }
 
 module.exports = {

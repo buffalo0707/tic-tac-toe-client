@@ -23,10 +23,16 @@ const signInSuccess = (data) => {
   $('#sign-out-nav').show()
   $('#stats-nav').show()
   $('#jumbotron').hide()
-  // store.user = data.user
-  // gameApi.createGame()
-  // .then(gameUi.createSuccess)
-  // .catch(gameUi.createFailure)
+
+  store.user = data.user
+}
+
+const startGame = () => {
+    $('#game').show()
+    $('#game-selection').hide()
+  gameApi.createGame()
+  .then(gameUi.createSuccess)
+  .catch(gameUi.createFailure)
   $('#sign-out-nav').show()
   gameEvents.getAllGames()
 }
@@ -77,5 +83,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   showSignUp,
-  clearSignIn
+  clearSignIn,
+  startGame
 }
