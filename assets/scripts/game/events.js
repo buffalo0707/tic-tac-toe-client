@@ -33,14 +33,14 @@ const chooseCell = function (event) {
   event.preventDefault()
   if (gameData.gameOver === true) {
     // do nothing for now
-  } else if (this.getAttribute('src') === 'https://i.imgur.com/BiJgF5Z.jpg') {
+  } else if (this.getAttribute('src') === gameData.imageBlank) {
     // update hidden form
     $('#cell-index-input').attr('value', this.id)
     $('#cell-value-input').attr('value', currentPlayer)
     if (currentPlayer === 'x') {
-      this.setAttribute('src', 'https://i.imgur.com/inG89Ay.jpg')
+      this.setAttribute('src', gameData.imagePlayerX)
     } else {
-      this.setAttribute('src', 'https://i.imgur.com/chXYzaK.jpg')
+      this.setAttribute('src', gameData.imagePlayerO)
     }
     gameData.updatePlayerArray(currentPlayer, this.id)
     gameData.cells[this.id] = currentPlayer
@@ -70,10 +70,25 @@ const getAllGames = function () {
   .then(ui.getSuccess)
   .catch(ui.getFailure)
 }
+const chooseSide = function (event) {
+  ui.onChooseSide
+  if (this.id === 'empire') {
+    console.log('empire');
+    gameData.imagePlayerX = gameData.imageEmpire
+    gameData.imagePlayerO = gameData.imageRebel
+  } else {
+    gameData.imagePlayerO = gameData.imageEmpire
+    gameData.imagePlayerX = gameData.imageRebel
+  }
+  console.log(gameData.imagePlayerX, gameData.imagePlayerO);
+  $('#game').show()
+  $('#select-side').hide()
+}
 
 const addHandlers = () => {
   $('.cell').on('click', chooseCell)
   $('#new-game').on('click', newGame)
+  $('.side-option').on('click', chooseSide)
 }
 
 module.exports = {

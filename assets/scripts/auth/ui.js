@@ -14,15 +14,14 @@ const signUpFailure = () => {
 }
 
 const signInSuccess = (data) => {
-  $('#sign-in-modal').modal('hide')
-  $('#landing').hide()
-  $('#sign-in-nav').hide()
-  $('#sign-up-nav').hide()
   $('#change-password-nav').show()
   $('#sign-out-nav').show()
   $('#stats-nav').show()
+  $('#select-side').show()
   $('#jumbotron').hide()
-  $('#game').show()
+  $('#sign-in-modal').modal('hide')
+  $('#sign-in-nav').hide()
+  $('#sign-up-nav').hide()
   store.user = data.user
   gameApi.createGame()
   .then(gameUi.createSuccess)

@@ -13,6 +13,12 @@ const winningCombos = [
   ['0', '4', '8'],
   ['2', '4', '6']
 ]
+const imageEmpire = 'https://i.imgur.com/inG89Ay.jpg'
+const imageRebel = 'https://i.imgur.com/chXYzaK.jpg'
+const imageBlank = 'https://i.imgur.com/BiJgF5Z.jpg'
+
+const imagePlayerX = ''
+const imagePlayerO = ''
 
 const oCells = []
 
@@ -48,5 +54,10 @@ module.exports = {
   gameOver,
   updatePlayerArray,
   resetData,
-  gameHistory
+  gameHistory,
+  imageEmpire,
+  imageRebel,
+  imageBlank,
+  imagePlayerX,
+  imagePlayerO
 }

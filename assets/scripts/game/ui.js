@@ -3,8 +3,11 @@ const store = require('../store.js')
 const gameLogic = require('./logic.js')
 
 const initializeSite = function () {
-  $('#sign-in-button, #sign-in-nav, #jumbotron, #sign-up-nav, #landing').show()
-  $('#new-game, #game, #sign-out.nav, #change-password-nav, #sign-in-alert, #sign-up-alert, #change-password-alert, #sign-out-nav, #stats-nav').hide()
+  $('#sign-in-button, #sign-in-nav, #jumbotron, #sign-up-nav').show()
+  $('#new-game, #game, #sign-out.nav, #change-password-nav, #sign-in-alert, #sign-up-alert, #change-password-alert, #sign-out-nav, #stats-nav, #select-side').hide()
+  resetBoard()
+  $('#empire').attr('src', gameData.imageEmpire)
+  $('#rebel').attr('src', gameData.imageRebel)
 }
 
 const resetBoard = function () {
@@ -60,6 +63,7 @@ const updateStats = (isWin) => {
   $('#completed-games').html(games)
   $('#won-games').html(wins)
 }
+
 
 module.exports = {
   initializeSite,
