@@ -54,7 +54,13 @@ const isWin = function (player) {
 const isGameOver = function (currentPlayer) {
   if (isWin(currentPlayer) === true) {
     gameData.gameOver = true
-    $('#game-message').html('Player ' + currentPlayer.toUpperCase() + ' wins!')
+    let faction = ''
+    if (currentPlayer === 'x') {
+      faction = gameData.factionPlayerX
+    } else {
+      faction = gameData.factionPlayerO
+    }
+    $('#game-message').html('The ' + faction + ' wins!')
     $('#game-message').addClass('alert-success')
     if (currentPlayer === 'x') {
       updateStats(true)
@@ -69,6 +75,7 @@ const isGameOver = function (currentPlayer) {
   }
   $('#game-over-input').attr('value', gameData.gameOver)
 }
+
 const updateStats = (isWin) => {
   let games = $('#completed-games').html()
   let wins = $('#won-games').html()

@@ -1,5 +1,7 @@
 const cells = ['', '', '', '', '', '', '', '', '']
+
 const gameHistory = []
+
 const winningCombos = [
   // rows
   ['0', '1', '2'],
@@ -14,11 +16,19 @@ const winningCombos = [
   ['2', '4', '6']
 ]
 const imageEmpire = 'https://i.imgur.com/inG89Ay.jpg'
+
 const imageRebel = 'https://i.imgur.com/chXYzaK.jpg'
+
 const imageBlank = 'https://i.imgur.com/BiJgF5Z.jpg'
 
+
 const imagePlayerX = ''
+
 const imagePlayerO = ''
+
+const factionPlayerX = ''
+
+const factionPlayerO = ''
 
 const oCells = []
 
@@ -59,5 +69,7 @@ module.exports = {
   imageRebel,
   imageBlank,
   imagePlayerX,
-  imagePlayerO
+  imagePlayerO,
+  factionPlayerX,
+  factionPlayerO
 }

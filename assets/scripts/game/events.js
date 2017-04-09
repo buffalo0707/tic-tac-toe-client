@@ -9,8 +9,10 @@ let currentPlayer = 'x'
 const nextTurn = function () {
   if (currentPlayer === 'x') {
     currentPlayer = 'o'
+    $('#game-message').html(gameData.factionPlayerO + ' - your turn')
   } else {
     currentPlayer = 'x'
+    $('#game-message').html(gameData.factionPlayerX + ' - your turn')
   }
 }
 
@@ -50,8 +52,9 @@ const chooseCell = function (event) {
     $('#game-form').trigger('submit')
     if (gameData.gameOver === true) {
       $('#new-game').show()
+    } else {
+      nextTurn()
     }
-    nextTurn()
   } else {
     // do nothing?
   }
@@ -73,16 +76,19 @@ const getAllGames = function () {
 const chooseSide = function (event) {
   ui.onChooseSide
   if (this.id === 'empire') {
-    console.log('empire');
     gameData.imagePlayerX = gameData.imageEmpire
+    gameData.factionPlayerX = 'Galactic Empire'
     gameData.imagePlayerO = gameData.imageRebel
+    gameData.factionPlayerO = 'Rebel Alliance'
   } else {
     gameData.imagePlayerO = gameData.imageEmpire
+    gameData.factionPlayerX = 'Rebel Alliance'
     gameData.imagePlayerX = gameData.imageRebel
+    gameData.factionPlayerO = 'Galactic Empire'
   }
-  console.log(gameData.imagePlayerX, gameData.imagePlayerO);
   $('#game').show()
   $('#select-side').hide()
+  $('#game-message').html(gameData.factionPlayerX + ' - your turn')
 }
 
 const addHandlers = () => {
