@@ -21,7 +21,6 @@ const imageRebel = 'https://i.imgur.com/chXYzaK.jpg'
 
 const imageBlank = 'https://i.imgur.com/BiJgF5Z.jpg'
 
-
 const imagePlayerX = ''
 
 const imagePlayerO = ''

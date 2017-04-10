@@ -64,7 +64,6 @@ const updateStats = (isWin) => {
   $('#won-games').html(wins)
 }
 
-
 module.exports = {
   initializeSite,
   resetBoard,
