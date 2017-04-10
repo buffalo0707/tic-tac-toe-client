@@ -60,7 +60,8 @@ img {
   border-radius: 10px;
 }
 
-.winner {
+.winner, .cell:focus {
+  outline: 0;
   border: 5px solid #35ba2a;
   border-radius: 10px;
 }
