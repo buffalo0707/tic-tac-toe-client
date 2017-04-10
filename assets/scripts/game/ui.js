@@ -18,7 +18,7 @@ const resetBoard = function () {
     array[i].classList.remove('winner')
   }
   $('#game-over-input').attr('value', gameData.gameOver)
-  $('#game-message').html('Let the battle begin!')
+  $('#game-message').html(gameData.factionPlayerX + ' - your turn')
   $('#game-message').removeClass('alert-success')
   $('#game-message').removeClass('alert-warning')
 }
