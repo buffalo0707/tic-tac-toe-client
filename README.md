@@ -6,9 +6,18 @@ https://buffalo0707.github.io/tic-tac-toe-client/#
 
 ## Tic-Tac-Toe Project
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+A game for two players, set in the Star Wars universe.
+
+Player 1 can sign-up and login. After logging in, Player 1 can pick a faction: Rebels of Empire. A new game is created on the server using HTTP POST request after selectinvg a faction. Player 1 can then begin a game of tic-tac-toe against another player using the same computer/device.
+
+After each move, the game is updated on the server via HTTP PATCH request
+
+Player 1's stats (wins and completed games) are tracked and updated after each game is completed. The stats are calculated using an index of games return from the server after an HTTP GET request.
+
+While logged in, Player 1 can update his/her password and also log out of the game.
+
+This is a Single Page Application. All view changes are handled by hiding/showing sections of the index.html page. 
+
 
 ## User Stories
 
