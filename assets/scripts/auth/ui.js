@@ -16,8 +16,8 @@ const signUpFailure = () => {
 const signInSuccess = (data) => {
   $('#change-password-nav').show()
   $('#sign-out-nav').show()
-  $('#stats-nav').show()
   $('#select-side').show()
+  $('#stats-nav').show()
   $('#jumbotron').hide()
   $('#sign-in-modal').modal('hide')
   $('#sign-in-nav').hide()
@@ -27,7 +27,7 @@ const signInSuccess = (data) => {
   .then(gameUi.createSuccess)
   .catch(gameUi.createFailure)
   $('#sign-out-nav').show()
-  gameEvents.getAllGames()
+  gameEvents.getCompletedGames()
 }
 
 const signInFailure = () => {

@@ -29,6 +29,7 @@ const newGame = function () {
   api.createGame()
   .then(ui.createSuccess)
   .catch(ui.createFailure)
+  getCompletedGames()
 }
 
 const chooseCell = function (event) {
@@ -68,7 +69,7 @@ const onGameFormSubmit = function (event) {
   .then(ui.updateSuccess)
   .catch(ui.updateFailure)
 }
-const getAllGames = function () {
+const getCompletedGames = function () {
   api.getGames(true)
   .then(ui.getSuccess)
   .catch(ui.getFailure)
@@ -100,5 +101,5 @@ const addHandlers = () => {
 module.exports = {
   addHandlers,
   onLoad,
-  getAllGames
+  getCompletedGames
 }

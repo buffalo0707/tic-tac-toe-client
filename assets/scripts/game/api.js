@@ -21,6 +21,7 @@ const updateGame = (data) => {
   })
 }
 const getGames = (isComplete) => {
+  store.games = {}
   if (isComplete) {
     return $.ajax({
       url: config.apiOrigin + '/games?over=true',

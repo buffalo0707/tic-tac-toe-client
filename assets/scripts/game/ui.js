@@ -4,7 +4,7 @@ const gameLogic = require('./logic.js')
 
 const initializeSite = function () {
   $('#sign-in-button, #sign-in-nav, #jumbotron, #sign-up-nav').show()
-  $('#new-game, #game, #sign-out.nav, #change-password-nav, #sign-in-alert, #sign-up-alert, #change-password-alert, #sign-out-nav, #stats-nav, #select-side').hide()
+  $('#new-game, #game, #sign-out.nav, #change-password-nav, #sign-in-alert, #sign-up-alert, #change-password-alert, #sign-out-nav, #select-side, #stats-nav').hide()
   resetBoard()
   $('#empire').attr('src', gameData.imageEmpire)
   $('#rebel').attr('src', gameData.imageRebel)
@@ -40,28 +40,15 @@ const updateFailure = () => {
 }
 
 const getSuccess = (data) => {
-  getGameStats(data)
+  store.games = data.games
+  const games = store.games.length
+  const wins = gameLogic.getWinHistory()
+  $('#completed-games').html(games)
+  $('#won-games').html('')
+  $('#won-games').html(wins)
 }
 
 const getFailure = () => {
-}
-
-const getGameStats = (data) => {
-  const games = data.games.length
-  const wins = gameLogic.getWinHistory(data)
-  $('#completed-games').html(games)
-  $('#won-games').html(wins)
-}
-
-const updateStats = (isWin) => {
-  let games = $('#completed-games').html()
-  let wins = $('#won-games').html()
-  games = +games + 1
-  if (isWin) {
-    wins = +wins + 1
-  }
-  $('#completed-games').html(games)
-  $('#won-games').html(wins)
 }
 
 module.exports = {
@@ -72,7 +59,5 @@ module.exports = {
   updateSuccess,
   updateFailure,
   getSuccess,
-  getFailure,
-  getGameStats,
-  updateStats
+  getFailure
 }

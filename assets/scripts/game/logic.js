@@ -1,10 +1,12 @@
 const gameData = require(`./data`)
+const store = require('../store.js')
+
 // function used to get all of a player's claimed cells from the cells array
 // will be called when starting an in-progress game returned from the api
-const getWinHistory = function (data) {
+const getWinHistory = function () {
   let result = 0
-  for (let i = 0; i < data.games.length; i++) {
-    gameData.gameHistory.push(selectedCells(data.games[i].cells, 'x'))
+  for (let i = 0; i < store.games.length; i++) {
+    gameData.gameHistory.push(selectedCells(store.games[i].cells, 'x'))
   }
   for (let i = 0; i < gameData.gameHistory.length; i++) {
     const selectedArray = gameData.gameHistory[i]
@@ -19,6 +21,7 @@ const getWinHistory = function (data) {
       result += 1
     }
   }
+  gameData.gameHistory = []
   return result
 }
 
@@ -62,18 +65,13 @@ const isGameOver = function (currentPlayer) {
     }
     $('#game-message').html('The ' + faction + ' wins!')
     $('#game-message').addClass('alert-success')
-    if (currentPlayer === 'x') {
-      updateStats(true)
-    } else {
-      updateStats()
-    }
   } else if (gameData.xCells.length + gameData.oCells.length === 9) {
     gameData.gameOver = true
     $('#game-message').html('Tie. Try again')
     $('#game-message').addClass('alert-warning')
-    updateStats()
   }
   $('#game-over-input').attr('value', gameData.gameOver)
+
 }
 
 const updateStats = (isWin) => {
