@@ -8,6 +8,7 @@ const initializeSite = function () {
   resetBoard()
   $('#empire').attr('src', gameData.imageEmpire)
   $('#rebel').attr('src', gameData.imageRebel)
+  gameData.gameOver = false
 }
 
 const resetBoard = function () {

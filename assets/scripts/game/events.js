@@ -18,6 +18,7 @@ const nextTurn = function () {
 
 const onLoad = function () {
   ui.initializeSite()
+  gameData.gameOver = false
 }
 
 const newGame = function () {
@@ -32,8 +33,10 @@ const newGame = function () {
 }
 
 const chooseCell = function (event) {
+  console.log("this is happening");
   event.preventDefault()
   if (gameData.gameOver === true) {
+    console.log("game over is true");
     // do nothing for now
   } else if (this.getAttribute('src') === gameData.imageBlank) {
     // update hidden form

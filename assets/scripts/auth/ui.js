@@ -4,6 +4,7 @@ const store = require('../store.js')
 const gameApi = require('../game/api.js')
 const gameUi = require('../game/ui.js')
 const gameEvents = require('../game/events.js')
+const gameData = require('../game/data.js')
 
 const signUpSuccess = (data) => {
   $('#sign-up-modal').modal('hide')
@@ -37,6 +38,8 @@ const signInFailure = () => {
 const signOutSuccess = () => {
   store.user = {}
   gameUi.initializeSite()
+  gameData.resetData()
+  console.log(gameData.gameOver);
   // need to change view
 }
 
