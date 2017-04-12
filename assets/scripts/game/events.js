@@ -29,7 +29,6 @@ const newGame = function () {
   api.createGame()
   .then(ui.createSuccess)
   .catch(ui.createFailure)
-  getCompletedGames()
 }
 
 const chooseCell = function (event) {
@@ -53,6 +52,7 @@ const chooseCell = function (event) {
     $('#game-form').trigger('submit')
     if (gameData.gameOver === true) {
       $('#new-game').show()
+      getCompletedGames()
     } else {
       nextTurn()
     }
