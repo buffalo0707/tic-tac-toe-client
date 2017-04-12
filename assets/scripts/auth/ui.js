@@ -39,12 +39,9 @@ const signOutSuccess = () => {
   store.user = {}
   gameUi.initializeSite()
   gameData.resetData()
-  console.log(gameData.gameOver);
-  // need to change view
 }
 
 const signOutFailure = () => {
-  // do nothing
 }
 
 const changePasswordSuccess = () => {

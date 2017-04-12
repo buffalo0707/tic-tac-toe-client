@@ -41,8 +41,6 @@ const updatePlayerArray = function (player, id) {
   } else if (player === 'x') {
     xCells.push(id)
   }
-  console.log(oCells);
-  console.log(xCells);
 }
 
 const resetData = function () {
